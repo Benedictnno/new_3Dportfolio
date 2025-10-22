@@ -2,19 +2,7 @@
 
 /* Design tokens */
 :root {
-  /* HSL tokens for runtime theming */
-  --bg: 0 0% 100%;
-  --fg: 224 71.4% 4.1%;
-  --primary: 260 84% 54%; /* electric purple */
-  --secondary: 198 93% 60%;
-  --accent: 45 100% 51%;
-  --muted: 215 16% 47%;
-  --border: 220 13% 91%;
-
-  --radius: 12px;
-}
-
-.dark {
+  /* HSL tokens for runtime theming - Default to dark mode */
   --bg: 224 71% 4%;
   --fg: 210 20% 98%;
   --primary: 260 84% 66%;
@@ -22,6 +10,18 @@
   --accent: 45 100% 60%;
   --muted: 215 16% 72%;
   --border: 220 13% 18%;
+
+  --radius: 12px;
+}
+
+.light {
+  --bg: 0 0% 100%;
+  --fg: 224 71.4% 4.1%;
+  --primary: 260 84% 54%; /* electric purple */
+  --secondary: 198 93% 60%;
+  --accent: 45 100% 51%;
+  --muted: 215 16% 47%;
+  --border: 220 13% 91%;
 }
 
 @theme inline {
@@ -76,12 +76,32 @@ section { scroll-snap-align: start; }
   opacity: 0;
 }
 
+/* Enhanced button styles */
+.btn-primary {
+  @apply inline-flex items-center justify-center px-6 py-3 bg-primary text-bg rounded-lg font-medium hover:bg-primary/90 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary/40;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center px-6 py-3 border border-border rounded-lg font-medium hover:bg-border/20 transition-colors focus:outline-none focus:ring-2 focus:ring-primary/40;
+}
+
+.btn-ghost {
+  @apply inline-flex items-center justify-center px-6 py-3 text-fg rounded-lg font-medium hover:bg-border/20 transition-colors focus:outline-none focus:ring-2 focus:ring-primary/40;
+}
+
 .container {
   margin-inline: auto;
   padding-inline: var(--container-padding);
 }
 @media (min-width: 768px) {
   .container { padding-inline: var(--container-padding-md); }
+}
+
+/* Ensure social icons stay above all content */
+.social-icons {
+  position: fixed !important;
+  z-index: 99999 !important;
+  pointer-events: auto !important;
 }
 
 .prose a { color: var(--color-primary); }

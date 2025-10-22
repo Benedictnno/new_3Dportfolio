@@ -81,3 +81,4 @@ export function SkillBar({ skill }: { skill: Skill }) {
 		</div>
 	)
 }
+

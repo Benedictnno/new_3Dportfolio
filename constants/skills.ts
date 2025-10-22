@@ -1,21 +1,27 @@
 export const skills = [
 	// Frontend Core
-	{ name: 'React', level: 95, category: 'Frontend', icon: '⚛️' },
-	{ name: 'Next.js', level: 90, category: 'Frontend', icon: '▲' },
-	{ name: 'TypeScript', level: 88, category: 'Frontend', icon: '🔷' },
+	{ name: 'React & Next.js', level: 95, category: 'Frontend', icon: '⚛️' },
+	{ name: 'JavaScript / TypeScript', level: 80, category: 'Frontend', icon: '▲' },
 	{ name: 'Tailwind CSS', level: 92, category: 'Styling', icon: '🎨' },
-	
-	// Animation & UX
-	{ name: 'Framer Motion', level: 85, category: 'Animation', icon: '🎬' },
-	{ name: 'GSAP', level: 80, category: 'Animation', icon: '⚡' },
-	{ name: 'Three.js', level: 75, category: '3D', icon: '🎯' },
-	{ name: 'UX/UI Design', level: 88, category: 'Design', icon: '✨' },
-	
-	// Tools & Performance
-	{ name: 'Web Performance', level: 90, category: 'Performance', icon: '⚡' },
-	{ name: 'Accessibility', level: 85, category: 'Quality', icon: '♿' },
-	{ name: 'Testing', level: 78, category: 'Quality', icon: '🧪' },
-	{ name: 'Git', level: 82, category: 'Tools', icon: '📦' },
+
+	// Backend Core
+	{ name: 'Node.js / Express', level: 85, category: 'Backend', icon: '🔷' },
+	{ name: 'MongoDB / Firebase', level: 75, category: 'Database', icon: '🎯' },
+	{ name: 'REST & GraphQL APIs', level: 82, category: 'API', icon: '📦' },
+	{ name: 'MySQL', level: 78, category: 'Database', icon: '🧪' },
+
+
+	// Web3
+	{ name: 'Solana / TON', level: 85, category: 'Web3', icon: '🔷' },
+
+	// Tools
+	{ name: 'Git & GitHub', level: 85, category: 'Tools', icon: '🔷' },
+	{ name: 'Docker', level: 75, category: 'Tools', icon: '🎯' },
+	{ name: 'Vercel / Netlify / Render', level: 80, category: 'Tools', icon: '⚡' },
+
+
+	// Design
+	{ name: 'Framer Motion / GSAP', level: 85, category: 'Animation', icon: '🔷' },
 ];
 
 
