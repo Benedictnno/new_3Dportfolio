@@ -49,7 +49,7 @@ export function SkillBar({ skill }: { skill: Skill }) {
 					toggleActions: 'play none none reverse'
 				},
 				onUpdate: function() {
-					percentageRef.current!.textContent = Math.round(this.targets()[0].textContent)
+					percentageRef.current!.textContent = Math.round(Number(this.targets()[0].textContent)).toString()
 				}
 			}
 		)
@@ -81,4 +81,3 @@ export function SkillBar({ skill }: { skill: Skill }) {
 		</div>
 	)
 }
-

@@ -49,6 +49,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <header>
+        <link href="https://db.onlinewebfonts.com/c/030bed0195cd98cd301bdd3e3a59f234?family=Link+Sans" rel="stylesheet" type="text/css"/>
+      </header>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <SkipLink />
         <ScrollEffects />

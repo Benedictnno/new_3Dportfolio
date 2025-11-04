@@ -3,7 +3,6 @@ import { useEffect, useRef } from 'react'
 import { useFrame, useThree } from '@react-three/fiber'
 import * as THREE from 'three'
 import { getGsap, motionOK } from '@/lib/gsap'
-import { BrandModel } from './BrandModel'
 import { ParticleField } from '@/components/effects/ParticleField'
 
 export function HeroScene() {
@@ -44,7 +43,7 @@ export function HeroScene() {
 		<group ref={groupRef}>
 			<hemisphereLight intensity={0.6} />
 			<directionalLight position={[5, 5, 5]} intensity={1.5} castShadow />
-			<BrandModel />
+			{/* <BrandModel /> */}
 			<ParticleField />
 		</group>
 	)

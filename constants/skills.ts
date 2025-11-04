@@ -6,17 +6,11 @@ export const skills = [
 
 	// Backend Core
 	{ name: 'Node.js / Express', level: 85, category: 'Backend', icon: '🔷' },
-	{ name: 'MongoDB / Firebase', level: 75, category: 'Database', icon: '🎯' },
+	{ name: 'MongoDB / MySQL / Firebase', level: 75, category: 'Database', icon: '🎯' },
 	{ name: 'REST & GraphQL APIs', level: 82, category: 'API', icon: '📦' },
-	{ name: 'MySQL', level: 78, category: 'Database', icon: '🧪' },
-
-
-	// Web3
-	{ name: 'Solana / TON', level: 85, category: 'Web3', icon: '🔷' },
-
+	
 	// Tools
-	{ name: 'Git & GitHub', level: 85, category: 'Tools', icon: '🔷' },
-	{ name: 'Docker', level: 75, category: 'Tools', icon: '🎯' },
+	{ name: 'Git & GitHub / Docker', level: 85, category: 'Tools', icon: '🔷' },
 	{ name: 'Vercel / Netlify / Render', level: 80, category: 'Tools', icon: '⚡' },
 
 

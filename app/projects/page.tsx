@@ -33,7 +33,7 @@ export default function ProjectsPage() {
         <div className="mt-20 text-center">
           <h2 className="text-3xl font-bold mb-4">Interested in working together?</h2>
           <p className="text-muted mb-8 max-w-2xl mx-auto">
-            I'm always excited to take on new challenges and create amazing digital experiences.
+            I&apos;m always excited to take on new challenges and create amazing digital experiences.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 

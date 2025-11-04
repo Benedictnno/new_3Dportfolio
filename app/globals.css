@@ -45,6 +45,7 @@ html { scroll-behavior: smooth; }
 body {
   background-color: var(--color-bg);
   color: var(--color-fg);
+  font-family: "Link Sans";
 }
 
 .snap-y { scroll-snap-type: y mandatory; }

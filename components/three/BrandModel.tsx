@@ -4,7 +4,7 @@ import { useMemo, useRef } from 'react'
 import { useFrame, useThree } from '@react-three/fiber'
 
 export function BrandModel() {
-	const { pointer, viewport } = useThree()
+	const { pointer } = useThree()
 	const meshRef = useRef<THREE.Mesh>(null)
 	const materialRef = useRef<THREE.MeshPhysicalMaterial>(null)
 	
@@ -44,7 +44,6 @@ export function BrandModel() {
 		meshRef.current.position.z = mouseY * 0.2
 
 		// Dynamic material properties
-		const intensity = 1 + distance * 0.3
 		materialRef.current.emissiveIntensity = distance * 0.1
 		materialRef.current.roughness = 0.22 + Math.sin(t * 0.6) * 0.02 + distance * 0.05
 		materialRef.current.metalness = 0.6 + distance * 0.1

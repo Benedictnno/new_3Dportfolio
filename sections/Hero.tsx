@@ -63,13 +63,12 @@ export function Hero() {
       ref={titleRef}
       className="mt-3 text-4xl font-bold tracking-tight md:text-6xl"
     >
-      Building scalable web applications and impactful digital products.
+      Building web applications and digital products.
     </h1>
     <p ref={subRef} className="mt-5 text-muted md:text-lg">
       I engineer fast, modern user experiences with React, Next.js, TypeScript,
       and Tailwind. I also build robust backend systems using Node.js, Express,
-      MongoDB, and GraphQL, with growing expertise in Web3 integrations on
-      Solana and TON.
+      MongoDB, and GraphQL.
     </p>
     <div ref={ctaRef} className="mt-8 flex gap-4">
       <a href="#projects" className="rounded bg-primary px-5 py-3 text-bg">
