@@ -74,7 +74,7 @@ export function Hero() {
         <a href="#projects" className="rounded-full bg-primary px-8 py-4 text-bg font-bold hover:opacity-90 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/20">
           Work With Me
         </a>
-        <a href="/cv.pdf" className="rounded-full border-2 border-border px-8 py-4 font-bold hover:bg-border/10 transition-all hover:scale-105 active:scale-95">
+        <a href="/BenedictsResume.pdf" className="rounded-full border-2 border-border px-8 py-4 font-bold hover:bg-border/10 transition-all hover:scale-105 active:scale-95">
           Download CV
         </a>
       </div>
