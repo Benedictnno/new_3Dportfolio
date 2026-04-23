@@ -2,10 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  experimental: {
-    // Workaround for React DevTools compatibility
-    reactCompiler: false,
-  },
+  reactCompiler: false,
   webpack: (config, { dev }) => {
     if (dev) {
       // Suppress React DevTools version warnings in development
@@ -16,6 +13,7 @@ const nextConfig: NextConfig = {
     }
     return config;
   },
+  turbopack: {}, // Enable custom webpack config compatibility in Next.js 16
 };
 
 export default nextConfig;
