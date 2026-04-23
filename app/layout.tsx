@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
@@ -17,6 +17,10 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+export const viewport: Viewport = {
+  themeColor: "#6E3AFF",
+};
 
 export const metadata: Metadata = {
   title: siteMeta.title,
@@ -39,7 +43,6 @@ export const metadata: Metadata = {
     description: siteMeta.description,
     images: [siteMeta.ogImage],
   },
-  themeColor: "#6E3AFF",
 };
 
 export default function RootLayout({
@@ -49,10 +52,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <header>
-        <link href="https://db.onlinewebfonts.com/c/030bed0195cd98cd301bdd3e3a59f234?family=Link+Sans" rel="stylesheet" type="text/css"/>
-      </header>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <link href="https://db.onlinewebfonts.com/c/030bed0195cd98cd301bdd3e3a59f234?family=Link+Sans" rel="stylesheet" type="text/css"/>
         <SkipLink />
         <ScrollEffects />
         <ScrollGradient />

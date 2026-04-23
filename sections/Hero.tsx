@@ -81,14 +81,15 @@ export function Hero() {
     <SocialScroll />
   </div>
     {/* IMAGE SECTION */}
-  <div className="flex justify-center w-full lg:w-1/2 mt-8 lg:mt-0">
-    <Image
-      src={'/images/New_me.png'}
-      alt="Hero Image"
-      width={400}
-      height={400}
-      className="object-contain"
-    />
+  <div className="flex items-center justify-center lg:w-1/2 mt-8 lg:mt-0 lg:h-[60vh]">
+      <Image
+        src={'/images/New_me.png'}
+        alt="Hero Image"
+        width={450}
+        height={500}
+        className="object-contain max-sm:hidden "
+        priority
+      />
   </div>
 
 </section>
