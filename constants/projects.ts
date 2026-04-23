@@ -1,3 +1,4 @@
+
 export const projects = [
 	{
 		title: 'List Up ',
@@ -5,6 +6,22 @@ export const projects = [
 		image: '/images/listup.png',
 		href: 'https://listup.ng',
 		repo: 'https://github.com/Benedictnno/listup',
+		tags: ['Next.js', 'Tailwind', 'Framer Motion', "typescript", 'MongoDB', 'Express.js', 'REST APIs'],
+	},
+	{
+		title: 'SOP',
+		description: 'A sophisticated Solana meme-coin scanner and tracker that detects smart-money movements, calculates P&L metrics, and enables automated whale-wallet copy-trading.',
+		image: '/images/sop.png',
+		href: 'https://sop-scanner.vercel.app/',
+		repo: 'https://github.com/Benedictnno/SOP_meme-coin_bot',
+		tags: ['Next.js', 'Tailwind', 'Gsap', 'MongoDB', 'REST APIs'],
+	},
+	{
+		title: 'Tech Hub Eksu',
+		description: "A centralized platform for user registration and hub access, enabling admins to manage users, resources, and policies, while generating secure, printable ID cards with expiry and audit logs.",
+		image: '/images/techhub.png',
+		href: 'https://www.techhubeksu.com',
+		repo: 'https://github.com/Benedictnno/Tech_hub-eksu',
 		tags: ['Next.js', 'Tailwind', 'Framer Motion', "typescript", 'MongoDB', 'Express.js', 'REST APIs'],
 	},
 	{
@@ -22,14 +39,6 @@ export const projects = [
 		href: 'https://sparrowgadgets.netlify.app',
 		repo: 'https://github.com/Benedictnno/delicacyhub',
 		tags: ['Next.js', 'Tailwind', 'Framer Motion', "javascript", 'MongoDB', 'Express.js', 'REST APIs'],
-	},
-	{
-		title: 'Tech Hub Eksu',
-		description: "A centralized hub registration and access control platform that lets users register and book hub access, while administrators manage users, resources, and policies ,and automatically generate secure, printable ID cards with configurable expiration dates and audit logs.",
-		image: '/images/techhub.png',
-		href: 'https://techhub-eksu.vercel.app',
-		repo: 'https://github.com/Benedictnno/delicacyhub',
-		tags: ['Vue.js', 'Tailwind', 'Framer Motion', "typescript", 'MongoDB', 'Express.js', 'REST APIs'],
 	},
 ];
 

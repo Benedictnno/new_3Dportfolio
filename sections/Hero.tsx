@@ -41,7 +41,7 @@ export function Hero() {
     return (
      <section
   id="home"
-  className="relative isolate min-h-[80vh] flex flex-col lg:flex-row items-center"
+  className="relative isolate min-h-[90vh] flex items-center overflow-hidden"
 >
   {/* 3D scene as background layer - hidden on mobile */}
   <div className="pointer-events-none absolute inset-0 -z-10 hidden md:block">
@@ -53,47 +53,53 @@ export function Hero() {
   {/* Background Glow */}
   <div className="absolute inset-0 -z-20 bg-[radial-gradient(1200px_600px_at_50%_-100px,rgba(110,58,255,0.25),transparent)]" />
 
-
-  {/* TEXT CONTENT */}
-  <div className="container py-20 md:py-28 w-full lg:w-1/2">
-    <p className="text-sm uppercase tracking-widest text-primary/90">
-      A Full Stack Web Developer • Software Engineer
-    </p>
-    <h1
-      ref={titleRef}
-      className="mt-3 text-4xl font-bold tracking-tight md:text-6xl"
-    >
-      Building web applications and digital products.
-    </h1>
-    <p ref={subRef} className="mt-5 text-muted md:text-lg">
-      I engineer fast, modern user experiences with React, Next.js, TypeScript,
-      and Tailwind. I also build robust backend systems using Node.js, Express,
-      MongoDB, and GraphQL.
-    </p>
-    <div ref={ctaRef} className="mt-8 flex gap-4">
-      <a href="#projects" className="rounded bg-primary px-5 py-3 text-bg">
-        Work With Me
-      </a>
-      <a href="/cv.pdf" className="rounded border border-border px-5 py-3">
-        Download CV
-      </a>
+  <div className="container flex flex-col lg:flex-row items-center justify-between gap-12 pt-32 md:pt-20 pb-20 ">
+    {/* TEXT CONTENT */}
+    <div className="w-full lg:w-1/2 text-center lg:text-left z-10 lg:mt-20">
+      <p className="text-sm md:text-base uppercase tracking-widest text-primary font-bold mb-4">
+        A Full Stack Web Developer • Software Engineer
+      </p>
+      <h1
+        ref={titleRef}
+        className="text-3xl font-extrabold tracking-tight md:text-4xl lg:text-5xl leading-[1.1]"
+      >
+        Building web <span className="text-primary">applications</span> and digital products.
+      </h1>
+      <p ref={subRef} className="mt-8 text-muted md:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+        I engineer fast, modern user experiences with React, Next.js, TypeScript,
+        and Tailwind. I also build robust backend systems using Node.js, Express,
+        MongoDB, and GraphQL.
+      </p>
+      <div ref={ctaRef} className="mt-10 flex flex-wrap justify-center lg:justify-start gap-4">
+        <a href="#projects" className="rounded-full bg-primary px-8 py-4 text-bg font-bold hover:opacity-90 transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/20">
+          Work With Me
+        </a>
+        <a href="/cv.pdf" className="rounded-full border-2 border-border px-8 py-4 font-bold hover:bg-border/10 transition-all hover:scale-105 active:scale-95">
+          Download CV
+        </a>
+      </div>
+      <div className="mt-12 flex justify-center lg:justify-start">
+        <SocialScroll />
+      </div>
     </div>
-    <SocialScroll />
-  </div>
-    {/* IMAGE SECTION */}
-  <div className="flex items-center justify-center lg:w-1/2 mt-8 lg:mt-0 lg:h-[60vh]">
-      <Image
-        src={'/images/New_me.png'}
-        alt="Hero Image"
-        width={450}
-        height={500}
-        className="object-contain max-sm:hidden "
-        priority
-      />
-  </div>
 
+    {/* IMAGE SECTION */} 
+    <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-end relative max-sm:hidden">
+      <div className="relative w-[300px] h-[350px] md:w-[450px] md:h-[500px] lg:w-[450px] lg:h-[500px] group">
+        {/* Decorative elements behind image */}
+        <div className="absolute -inset-4 bg-primary/10 rounded-full blur-3xl opacity-50 group-hover:opacity-70 transition-opacity" />
+        
+        <Image
+          src={'/images/New_me.png'}
+          alt="Hero Image"
+          fill
+          className="object-contain relative z-10 drop-shadow-2xl"
+          priority
+        />
+      </div>
+    </div>
+  </div>
 </section>
-
     )
 }
 

@@ -17,42 +17,48 @@ export function SkillBar({ skill }: { skill: Skill }) {
 		if (!motionOK() || !barRef.current || !percentageRef.current) return
 		const gsap = getGsap()
 
-		// Animate the progress bar
-		gsap.fromTo(
-			barRef.current,
-			{ width: '0%' },
-			{
-				width: `${skill.level}%`,
-				duration: 1.2,
-				ease: 'power3.out',
-				delay: Math.random() * 0.3, // Stagger effect
-				scrollTrigger: {
-					trigger: barRef.current,
-					start: 'top 80%',
-					toggleActions: 'play none none reverse'
+		const ctx = gsap.context(() => {
+			// Animate the progress bar
+			gsap.fromTo(
+				barRef.current,
+				{ width: '0%' },
+				{
+					width: `${skill.level}%`,
+					duration: 1.2,
+					ease: 'power3.out',
+					delay: Math.random() * 0.3, // Stagger effect
+					scrollTrigger: {
+						trigger: barRef.current,
+						start: 'top 80%',
+						toggleActions: 'play none none reverse'
+					}
 				}
-			}
-		)
+			)
 
-		// Animate the percentage number
-		gsap.fromTo(
-			percentageRef.current,
-			{ textContent: '0' },
-			{
-				textContent: skill.level,
-				duration: 1.5,
-				ease: 'power2.out',
-				delay: Math.random() * 0.3 + 0.2,
-				scrollTrigger: {
-					trigger: barRef.current,
-					start: 'top 80%',
-					toggleActions: 'play none none reverse'
-				},
-				onUpdate: function() {
-					percentageRef.current!.textContent = Math.round(Number(this.targets()[0].textContent)).toString()
+			// Animate the percentage number
+			gsap.fromTo(
+				percentageRef.current,
+				{ textContent: '0' },
+				{
+					textContent: skill.level,
+					duration: 1.5,
+					ease: 'power2.out',
+					delay: Math.random() * 0.3 + 0.2,
+					scrollTrigger: {
+						trigger: barRef.current,
+						start: 'top 80%',
+						toggleActions: 'play none none reverse'
+					},
+					onUpdate: function() {
+						if (percentageRef.current) {
+							percentageRef.current.textContent = Math.round(Number(this.targets()[0].textContent)).toString()
+						}
+					}
 				}
-			}
-		)
+			)
+		})
+
+		return () => ctx.revert()
 	}, [skill.level])
 
 	return (

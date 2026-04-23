@@ -15,7 +15,7 @@ export default function ProjectsPage() {
       <header className="border-b border-border/60 bg-bg/70 backdrop-blur-sm sticky top-0 z-40">
         <div className="container py-6 flex items-center justify-between">
           <Link href="/" className="font-semibold tracking-tight text-fg">
-            ← Back to Portfolio
+            ← Back
           </Link>
           <h1 className="text-2xl font-bold">All Projects</h1>
         </div>

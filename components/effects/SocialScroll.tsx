@@ -78,7 +78,7 @@ export function SocialScroll() {
 					aria-label={"Visit example website"}
 					style={{ zIndex: 99999 }}
 				>
-					<span className="text-xs md:text-sm font-medium">{social.label}</span>
+					<span className="text-xs md:text-sm font-medium ">{social.label}</span>
 				</a>
 			))}
 		</div>
